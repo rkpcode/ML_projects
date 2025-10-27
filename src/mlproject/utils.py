@@ -27,7 +27,7 @@ def read_sql_data():
             db = db
         )
         logging.info("Connection Established",mydb)
-        df = pd.read_sql_query('SELECT * FROM survey_data', mydb)
+        df = pd.read_sql_query('SELECT * FROM students', mydb)
         print(df.head())
 
         return df
