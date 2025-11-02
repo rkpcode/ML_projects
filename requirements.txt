@@ -6,3 +6,5 @@ PyMySQL
 matplotlib
 seaborn
 flask
+catboost
+xgboost
