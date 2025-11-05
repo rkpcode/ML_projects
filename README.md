@@ -1,95 +1,59 @@
 ##End-End-ML Project
 
-Overview
-
-This repository contains multiple end-to-end Machine Learning projects developed using structured engineering practices. It covers the entire data science pipeline starting from data ingestion, exploratory data analysis (EDA), feature engineering, model building, experiment tracking, and model deployment using Flask.
+## Overview
+This repository contains multiple end-to-end **Machine Learning projects** developed using structured engineering practices. It covers the entire data science pipeline starting from data ingestion, exploratory data analysis (EDA), feature engineering, model building, experiment tracking, and model deployment using Flask.
 
 The goal of these projects is to build production-ready ML systems with modularized and reusable components.
 
+---
+
+## Project Structure
+---
+
+
+## Key Features
+- **Data Ingestion**: Extracts raw data from SQL databases and stores it in a structured format.
+- **Exploratory Data Analysis (EDA)**: Comprehensive visualization and statistical summary of the data.
+- **Feature Engineering & Transformation**: Handles missing values, encoding, scaling, and feature selection.
+- **Model Training**: Multiple models trained and compared (including CatBoost, XGBoost, etc.).
+- **Experiment Tracking**: Integrated **MLflow** and **DagsHub** for experiment logging and model versioning.
+- **Model Monitoring**: Tracks performance metrics and logs for continuous improvement.
+- **Deployment**: Flask-based web application for live predictions using the trained model.
+- **Containerization**: Dockerized for easy deployment and scalability.
 
 ---
 
-Project Structure
-
-├── .dvc/                    # DVC pipeline files for data versioning
-├── .github/                 # GitHub workflows for CI/CD integration
-├── artifacts/               # Saved models, logs, and intermediary files
-├── catboost_info/           # CatBoost metadata directory
-├── notebook/                # Jupyter notebooks for analysis and experiments
-│   ├── 1. EDA STUDENT PERFORMANCE.ipynb
-│   └── 2. MODEL TRAINING.ipynb
-├── src/                     # Core project source code (modules and pipelines)
-├── templates/               # HTML templates for Flask web application
-├── app.py                   # Entry point for running the Flask application
-├── flask_app.py             # Alternate or test Flask app setup
-├── Dockerfile               # Docker configuration for containerizing the app
-├── requirements.txt         # List of Python dependencies
-├── setup.py                 # Setup script for packaging and installation
-├── .gitignore               # Ignored files for Git
-├── .dvcignore               # Ignored files for DVC
-└── README.md                # Project documentation (this file)
-
+## Tech Stack
+**Programming Language:** Python 3.10+  
+**Frameworks & Libraries:** Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, CatBoost, XGBoost, MLflow, Flask  
+**Database:** MySQL  
+**Version Control & Tracking:** Git, DVC, MLflow, DagsHub  
+**Containerization:** Docker
 
 ---
 
-Key Features
-
-Data Ingestion: Extracts raw data from SQL databases and stores it in a structured format.
-
-Exploratory Data Analysis (EDA): Comprehensive visualization and statistical summary of the data.
-
-Feature Engineering & Transformation: Handles missing values, encoding, scaling, and feature selection.
-
-Model Training: Multiple models trained and compared (including CatBoost, XGBoost, etc.).
-
-Experiment Tracking: Integrated MLflow and DagsHub for experiment logging and model versioning.
-
-Model Monitoring: Tracks performance metrics and logs for continuous improvement.
-
-Deployment: Flask-based web application for live predictions using the trained model.
-
-Containerization: Dockerized for easy deployment and scalability.
-
-
-
----
-
-Tech Stack
-
-Programming Language: Python 3.10+
-Frameworks & Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, CatBoost, XGBoost, MLflow, Flask
-Database: MySQL
-Version Control & Tracking: Git, DVC, MLflow, DagsHub
-Containerization: Docker
-
-
----
-
-Getting Started
-
-1. Clone the Repository
-
+## Getting Started
+### 1. Clone the Repository
+```bash
 git clone https://github.com/rkpcode/ML_projects.git
 cd ML_projects
 
-2. Create a Virtual Environment
+###2. Create a Virtual Environment
 
 python -m venv venv
 source venv/bin/activate    # For Linux/Mac
-venv\Scripts\activate       # For Windows
+venv\\Scripts\\activate       # For Windows
 
-3. Install Dependencies
+###3. Install Dependencies
 
 pip install -r requirements.txt
 
-4. Run the Flask Application
+###4. Run the Flask Application
+
 
 python app.py
 
 Visit the app in your browser at: http://127.0.0.1:5000/
-
-
----
 
 Project Workflow
 
@@ -151,8 +115,3 @@ Machine Learning Enthusiast | Data Science Learner
 🌐 GitHub Profile
 
 
----
-
-License
-
-This project is licensed under the MIT License - see the LICENSE file for details.## ML end-end project
