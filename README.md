@@ -70,7 +70,7 @@ source venv/bin/activate    # macOS/Linux
 
 ### 3. Install Dependencies
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt/ pip install .
 ```
 
 ### 4. Run the Notebooks
