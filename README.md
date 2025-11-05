@@ -1,4 +1,4 @@
-##End-End-ML Project
+END-TO-END ML Project 
 
 ## Overview
 This repository contains multiple end-to-end **Machine Learning projects** developed using structured engineering practices. It covers the entire data science pipeline starting from data ingestion, exploratory data analysis (EDA), feature engineering, model building, experiment tracking, and model deployment using Flask.
@@ -55,7 +55,7 @@ python app.py
 
 Visit the app in your browser at: http://127.0.0.1:5000/
 
-Project Workflow
+##Project Workflow
 
 1. Data Collection → Data fetched from SQL database.
 
@@ -85,7 +85,7 @@ Project Workflow
 
 ---
 
-Deployment (Docker)
+##Deployment (Docker)
 
 To build and run the Docker container:
 
@@ -95,7 +95,7 @@ docker run -p 5000:5000 ml_project_app
 
 ---
 
-Future Enhancements
+##Future Enhancements
 
 Integration with cloud services (AWS/GCP/Azure) for deployment.
 
@@ -107,7 +107,7 @@ Enhanced data drift and model monitoring system.
 
 ---
 
-Author
+##Author
 
 Rahul Kumar
 Machine Learning Enthusiast | Data Science Learner
