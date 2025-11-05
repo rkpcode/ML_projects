@@ -1,71 +1,69 @@
-# ML Projects 🚀
+# ML Projects Repository
 
-This repository contains a series of **machine learning projects** demonstrating data preprocessing, exploratory data analysis (EDA), and model building using Python. Each project is designed for hands-on learning and real-world application.
+## Overview
+This repository contains multiple end-to-end **Machine Learning projects** developed using structured engineering practices. It covers the entire data science pipeline starting from data ingestion, exploratory data analysis (EDA), feature engineering, model building, experiment tracking, and model deployment using Flask.
+
+The goal of these projects is to build production-ready ML systems with modularized and reusable components.
 
 ---
 
-## 📁 Repository Structure
+## Project Structure
 
 ```
-ML_projects/
-│
-├── notebook/
+├── .dvc/                    # DVC pipeline files for data versioning
+├── .github/                 # GitHub workflows for CI/CD integration
+├── artifacts/               # Saved models, logs, and intermediary files
+├── catboost_info/           # CatBoost metadata directory
+├── notebook/                # Jupyter notebooks for analysis and experiments
 │   ├── 1. EDA STUDENT PERFORMANCE.ipynb
-│   ├── 2. MODEL TRAINING.ipynb
-│
-├── data/
-│   ├── student_performance.csv (or similar datasets)
-│
-├── setup.py
-├── requirements.txt
-└── README.md
+│   └── 2. MODEL TRAINING.ipynb
+├── src/                     # Core project source code (modules and pipelines)
+├── templates/               # HTML templates for Flask web application
+├── app.py                   # Entry point for running the Flask application
+├── flask_app.py             # Alternate or test Flask app setup
+├── Dockerfile               # Docker configuration for containerizing the app
+├── requirements.txt         # List of Python dependencies
+├── setup.py                 # Setup script for packaging and installation
+├── .gitignore               # Ignored files for Git
+├── .dvcignore               # Ignored files for DVC
+└── README.md                # Project documentation (this file)
 ```
 
 ---
 
-## 🧠 Project Overview
-
-### 1. Exploratory Data Analysis (EDA)
-File: `1. EDA STUDENT PERFORMANCE.ipynb`
-
-- Loaded and inspected the dataset (students’ performance data).
-- Handled missing values, duplicates, and incorrect datatypes.
-- Visualized relationships between features like gender, parental education, and test scores.
-- Identified key insights to guide model training.
-
-### 2. Model Training
-File: `2. MODEL TRAINING.ipynb`
-
-- Applied preprocessing techniques (encoding categorical variables, normalization, etc.).
-- Trained multiple machine learning models (e.g., Linear Regression, Decision Tree, Random Forest).
-- Evaluated models using metrics such as accuracy, precision, recall, and F1-score.
-- Selected the best-performing model for final deployment.
+## Key Features
+- **Data Ingestion**: Extracts raw data from SQL databases and stores it in a structured format.
+- **Exploratory Data Analysis (EDA)**: Comprehensive visualization and statistical summary of the data.
+- **Feature Engineering & Transformation**: Handles missing values, encoding, scaling, and feature selection.
+- **Model Training**: Multiple models trained and compared (including CatBoost, XGBoost, etc.).
+- **Experiment Tracking**: Integrated **MLflow** and **DagsHub** for experiment logging and model versioning.
+- **Model Monitoring**: Tracks performance metrics and logs for continuous improvement.
+- **Deployment**: Flask-based web application for live predictions using the trained model.
+- **Containerization**: Dockerized for easy deployment and scalability.
 
 ---
 
-## 🧩 Technologies Used
-
-- **Python 3.10+**
-- **Jupyter Notebook**
-- **Pandas**, **NumPy**, **Matplotlib**, **Seaborn**
-- **Scikit-learn**
-- **Flask** (for model deployment demo, if applicable)
+## Tech Stack
+**Programming Language:** Python 3.10+  
+**Frameworks & Libraries:** Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, CatBoost, XGBoost, MLflow, Flask  
+**Database:** MySQL  
+**Version Control & Tracking:** Git, DVC, MLflow, DagsHub  
+**Containerization:** Docker
 
 ---
 
-## ⚙️ Setup Instructions
-
+## Getting Started
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/rkpcode/ML_projects.git
 cd ML_projects
 ```
 
-### 2. Create a Virtual Environment (Recommended)
+### 2. Create a Virtual Environment
 ```bash
 python -m venv venv
-venv\Scripts\activate      # Windows
-source venv/bin/activate    # macOS/Linux
+source venv/bin/activate    # For Linux/Mac
+venv\Scripts\activate     # For Windows
 ```
 
 ### 3. Install Dependencies
@@ -73,25 +71,56 @@ source venv/bin/activate    # macOS/Linux
 pip install -r requirements.txt
 ```
 
-### 4. Run the Notebooks
-Open Jupyter Notebook or VS Code and run:
+### 4. Run the Flask Application
 ```bash
-jupyter notebook notebook/1. EDA STUDENT PERFORMANCE.ipynb
+python app.py
+```
+
+Visit the app in your browser at: **http://127.0.0.1:5000/**
+
+---
+
+## Project Workflow
+
+1. **Data Collection** → Data fetched from SQL database.  
+2. **Data Ingestion** → Stored in local or DVC-managed directories.  
+3. **EDA** → Performed using Jupyter notebooks in `/notebook/`.  
+4. **Feature Engineering** → Feature transformations and preprocessing.  
+5. **Model Training** → Automated training and model selection pipeline.  
+6. **Model Tracking** → Monitored via MLflow and DagsHub.  
+7. **Model Deployment** → Served through Flask-based prediction API.  
+8. **Monitoring** → Model performance metrics logged and visualized.  
+
+---
+
+## Deployment (Docker)
+
+To build and run the Docker container:
+
+```bash
+docker build -t ml_project_app .
+docker run -p 5000:5000 ml_project_app
 ```
 
 ---
 
-## 🧾 License
-This project is released under the MIT License — feel free to use, modify, and distribute for educational or personal purposes.
+## Future Enhancements
+
+- Integration with cloud services (AWS/GCP/Azure) for deployment.  
+- Adding CI/CD pipeline for automated deployment.  
+- Enhanced data drift and model monitoring system.  
 
 ---
 
-## 👤 Author
+## Author
+
 **Rahul Kumar**  
-GitHub: [rkpcode](https://github.com/rkpcode)  
-LinkedIn: *(https://www.linkedin.com/in/rahul-kumar-pradhan-b62371321?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)*
+Machine Learning Enthusiast | Data Science AI/ML Learner  
+📧 [contactrkp21@gmail.com](mailto:contactrkp21@gmail.com)  
+🌐 [GitHub Profile](https://github.com/rkpcode)
 
 ---
 
-> ⭐ If you found this repository helpful, don’t forget to give it a star!
+## License
 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
