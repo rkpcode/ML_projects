@@ -1,7 +1,7 @@
 # ML Projects Repository
 
 ## Overview
-This repository contains multiple end-to-end **Machine Learning projects** developed using structured engineering practices. It covers the entire data science pipeline starting from data ingestion, exploratory data analysis (EDA), feature engineering, model building, experiment tracking, and model deployment using Flask.
+This repository contains  end-to-end **Machine Learning project** developed using structured engineering practices. It covers the entire data science pipeline starting from data ingestion, exploratory data analysis (EDA), feature engineering, model building, experiment tracking, and model deployment using Flask.
 
 The goal of these projects is to build production-ready ML systems with modularized and reusable components.
 
